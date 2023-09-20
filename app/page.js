@@ -14,16 +14,18 @@ import Image from 'next/image'
 export default function Home() {
   return (
 <mian>
-
+<Navbar />
+<Hero />
  <Message />
- <ShopFor />
+ <FeatureTab />
+ {/* <ShopFor />
  <BestSeller />
  <ExploreCollection />
  <CustomFilter />
  <FeatureTab />
  <BannerVideo />
- <Brands />
- <Navbar />
+ <Brands />  */}
+
  <Footer />
 </mian>
   )

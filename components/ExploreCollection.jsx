@@ -26,7 +26,7 @@ const ExploreCollection = () => {
       <div  className='home_product_grid'>5</div>
       <div  className='home_product_grid'>6</div>
 
-
+      <div>    <button href="/" className='btnBlack'>Read More</button></div>
     </div>
   )
 }

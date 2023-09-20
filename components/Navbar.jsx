@@ -15,13 +15,13 @@ const navigation = {
         {
           name: 'New Arrivals',
           href: '#',
-          imageSrc: 'public/women-nav.png',
+          imageSrc: '/women-nav.png',
           imageAlt: 'Models',
         },
         {
           name: 'Basic Tees',
           href: '#',
-          imageSrc: 'public/basic_tee.png',
+          imageSrc: '/basic_tee.png',
           imageAlt: 'Models Tee'
         },
       ],
@@ -74,13 +74,13 @@ const navigation = {
         {
           name: 'New Arrivals',
           href: '#',
-          imageSrc: 'public/men-nav.png',
+          imageSrc: '/men-nav.png',
           imageAlt: 'men',
         },
         {
           name: 'Artwork Tees',
           href: '#',
-          imageSrc: 'public/men-two.png',
+          imageSrc: '/men-two.png',
           imageAlt: 'Men Two'
         },
       ],
@@ -123,8 +123,15 @@ const navigation = {
     },
   ],
   pages: [
-    { name: 'Company', href: '#'},
-    { name: "Stores", href: '#'},
+    { name: 'New', href: '#'},
+    { name: "Men", href: '#'},
+    { name: "Women", href: '#'},
+    { name: "Sports", href: '#'},
+    { name: "Brands", href: '#'},
+    { name: "Collections", href: '#'},
+    { name: "About", href: '#'},
+
+
 
   ],
 }
@@ -281,7 +288,7 @@ export default function Navbar() {
       </Transition.Root>
 
 <header className="relative bg-white">
-<p className="flex h-10 items-center bg-indigo-600 px-4 text-sm font-medium text-white sm:px-6 lg:px-8">
+<p className="flex h-10 justify-center items-center text-center bg-black px-4 text-sm font-medium text-white sm:px-6 lg:px-8">
 Get free delivery on orders AED 100
  </p>
 
@@ -305,7 +312,7 @@ Get free delivery on orders AED 100
     <span className="sr-only">Your Company</span>
     <img
     className="h-8 w-auto"
-    src="/brand1.svg"
+    src="/logo-black.svg" width={100} height={100}
     alt=""
      />
   </a>

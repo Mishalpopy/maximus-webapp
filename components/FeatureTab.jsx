@@ -1,62 +1,63 @@
-import React from 'react'
-import Image from 'next/image'
-const FeatureTab = () => {
+"use client"
+import { Tabs, TabsHeader, TabsBody, Tab, TabPanel } from "@material-tailwind/react";
+
+
+export function TabsCustomAnimation() {
+  const data = [
+    {
+      label: "HTML",
+      value: "html",
+      desc: "It really matters and then like it really" 
+    },
+    {
+      label: "React",
+      value: "react",
+      desc: "It really matters and then like it really" 
+    },
+    {
+      label: "Vue",
+      value: "vue",
+      desc: "It really matters and then like it really" 
+    },
+    {
+      label: "Angular",
+      value: "angular",
+      desc: "It really matters and then like it really" 
+    },
+    {
+      label: "Svelte",
+      value: "svelte",
+      desc: "It really matters and then like it really" 
+    },
+  ];
   return (
-    <div className='bg-white'>
-    <div className='mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-34 lg:max-w-7xl lg:px-8'>
-      <h2 className='text-2xl font-bold tracking-tight text-gray-900'>Customers also purchased</h2>
+    <div className="container">
+    <Tabs id="custom-animation" value="html">
+      <TabsHeader>
+        {data.map(({ label, value}) => (
+          <Tab key={value} value={value}>
+            {label}
+          </Tab>
+        ))}
+      </TabsHeader>
+      <TabsBody
+      animate={{
+        initial: { y: 250 },
+        mount: { y: 0 },
+        unmount: { y: 250 },
+      }}
+      >
 
-      <div className='mt-6 grid grid-col-1 gap-x-6 gap-y-10 sm:grid-col-5 lg:grid-col-4 xl:gap-x-8'>
-        <div className='group relative'>
-          <div className='aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80'>
-          <Image
-          src="/home_product_one.png"
-          className='h-full w-full object-cover object-center lg:h-full lg:w-full'
-          width={100}
-          height={100}
-           />
-          </div>
-          <div className='mt-4 flex justify-between'>
-            <div>
-              <h3 className='text-sm text-gray-700'>
-                <a href='#'>
-                  <span aria-hidden="true" className='absolute inset-0'></span>
-                  Basic Tee
-                </a>
-              </h3>
-              <p className='mt-1 text-sm text-gray-500'>BLACK</p>
-            </div>
-          <p className='text-sm font-medium text-gray-900'>$35</p>
-          </div>
-        </div>
-        <div className='group relative'>
-          <div className='aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80'>
-          <Image
-          src="/home_product_one.png"
-          className='h-full w-full object-cover object-center lg:h-full lg:w-full'
-          width={100}
-          height={100}
-           />
-          </div>
-          <div className='mt-4 flex justify-between'>
-            <div>
-              <h3 className='text-sm text-gray-700'>
-                <a href='#'>
-                  <span aria-hidden="true" className='absolute inset-0'></span>
-                  Basic Tee
-                </a>
-              </h3>
-              <p className='mt-1 text-sm text-gray-500'>BLACK</p>
-            </div>
-          <p className='text-sm font-medium text-gray-900'>$35</p>
-          </div>
-        </div>
-      </div>
-      
+      {data.map(({ value, desc }) => (
+        <TabPanel key={value} value={value}>
+          {desc}
+        </TabPanel>
+      ))}
 
-    </div>
+      </TabsBody>
+    </Tabs>
     </div>
   )
 }
 
-export default FeatureTab
+export default TabsCustomAnimation
