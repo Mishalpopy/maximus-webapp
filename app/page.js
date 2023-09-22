@@ -15,8 +15,10 @@ import Footer from '@/components/Footer'
 import Hero from '@/components/Hero'
 import Message from '@/components/Message'
 import Navbar from '@/components/Navbar'
+import ProductDesc from '@/components/ProductDescriptiom'
 import ProducutGrid from '@/components/ProducutGrid'
 import ShopFor from '@/components/ShopFor'
+import ProductLeft from '@/components/productLeft'
 
 
 export default function Home() {
@@ -35,7 +37,9 @@ export default function Home() {
 <AboutUs />
 <AbtBanner />
 <ProducutGrid />
-
+<ProductLeft />
+<ProductDesc />
+<newBanner />
  <Footer />
 </mian>
   )

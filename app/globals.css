@@ -23,7 +23,7 @@
     color: white;
     text-transform: uppercase;
     margin: 9px;
-    max-width: 168px;
+    min-width: 168px;
     padding: 8px;
 
 }
